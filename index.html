@@ -8,7 +8,7 @@
 <body>
 <div class="container" id="app">
     <div>
-        <button class="btn btn-success" @click="send(1)">send watsapp</button>
+        <button class="btn btn-success" @click="send(1)" id="click">send watsapp</button>
 
 
     </div>
@@ -20,7 +20,10 @@
             message: 'Hello Vue!'
         }, methods: {
             send: function (number) {
-                var myWindow = window.open("", "", "width=200,height=100");
+                var myWindow = window.open("https://www.w3schools.com","","width=200,height=100");
+                //w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right
+               // document.getElementById("click").click();
+                console.log(myWindow);
             }
         }
     })
