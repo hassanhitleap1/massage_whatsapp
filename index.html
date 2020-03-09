@@ -20,10 +20,25 @@
             message: 'Hello Vue!'
         }, methods: {
             send: function (number) {
-                var myWindow = window.open("https://www.w3schools.com","","width=200,height=100");
-                //w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right
-               // document.getElementById("click").click();
-                console.log(myWindow);
+                let  newWindow = window.open("https://api.whatsapp.com/send?phone=27768483016","","width=200,height=100");
+                newWindow.document.getElementById("action-button").click();
+                setTimeout(function(){
+                    newWindow.document.getElementById("action-button").click()
+                }, 3000);
+                // ckick on action-button
+
+               // newWindow.onload = function() {
+                    //let scriptHtml=`<script> document.getElementById("click").click();;
+                //    let html = '';
+                 //   newWindow.document.body.insertAdjacentHTML('afterbegin', html);
+                //};
+
+                var str='document.onload = function() {document.getElementById("click").click();};';
+                //var str='document.getElementById("click").click()'
+               // newWindow.document.write("<script>+str+<\/script>");
+
+
+
             }
         }
     })
