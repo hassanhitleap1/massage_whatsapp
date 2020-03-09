@@ -1,0 +1,6 @@
+{
+  "name": "chrome extenstion",
+  "version": "1.0",
+  "description": "chrome extenstion for send watsapp!",
+  "manifest_version": 2
+}
