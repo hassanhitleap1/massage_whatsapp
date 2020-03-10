@@ -4,38 +4,74 @@
     <title>auto massgeing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <!--Floating WhatsApp javascript-->
+    <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+
 </head>
 <body>
 <div class="container" id="app">
+
     <div>
         <button class="btn btn-success" @click="send(1)" id="click">send watsapp</button>
-
-
     </div>
 </div>
+
 <script>
+
+
     var app = new Vue({
         el: '#app',
         data: {
             message: 'Hello Vue!'
         }, methods: {
             send: function (number) {
-                let  newWindow = window.open("https://api.whatsapp.com/send?phone=27768483016","","width=200,height=100");
-                newWindow.document.getElementById("action-button").click();
-                setTimeout(function(){
-                    newWindow.document.getElementById("action-button").click()
-                }, 3000);
+                //var src= "https://code.jquery.com/jquery-3.4.1.min.js"
+                var newWindow = window.open("https://web.whatsapp.com/send?phone=962796203005&text=test","","width=200,height=100");
+
+                //let  newWindow = window.open("https://web.whatsapp.com/send?phone=27768483016","","width=200,height=100");
+                // newWindow.document.getElementById("action-button").click();
+                // setTimeout(function(){
+                //     newWindow.document.getElementById("action-button").click()
+                // }, 3000);
                 // ckick on action-button
 
                // newWindow.onload = function() {
-                    //let scriptHtml=`<script> document.getElementById("click").click();;
-                //    let html = '';
-                 //   newWindow.document.body.insertAdjacentHTML('afterbegin', html);
-                //};
-
-                var str='document.onload = function() {document.getElementById("click").click();};';
+               //      let scriptHtml=`<script> document.getElementById("click").click() <\/script>`;
+               //     var str='document.onload = function() {document.getElementById("click").click();};';
+               //
+               //     newWindow.document.body.insertAdjacentHTML('afterbegin', scriptHtml);
+               //  };
+              //  let scriptHtml=`<script> document.getElementById("click").click() <\/script>`;
+               // var str=`document.onload = function() {document.getElementById("click").click();};`;
                 //var str='document.getElementById("click").click()'
-               // newWindow.document.write("<script>+str+<\/script>");
+
+                // newWindow.document.write('<script>alert("I was Injected")<\/script>');
+               // newWindow.document.body.innerHTML+="<input type='checkbox' id='IsConfirmed' />";
+                // newWindow.onload = function(){
+                //     x.document.write('<script>alert("I was Injected")<\/script>');
+                //     this.document.write("<input type='checkbox' id='IsConfirmed'  />")
+                //     // setTimeout(function(){this.document.getElementById("action-button").click() }, 3000);
+                // };
+
+
+                // newWindow.onload = function() {
+                //      let scriptHtml=`<script> alert('ss') <\/script>`;
+                //         newWindow.document.body.appendChild(scriptHtml);
+                //         //newWindow.document.write("<script>+scriptHtml+<\/script>");
+                //     // newWindow.document.body.insertAdjacentHTML('afterbegin', scriptHtml);
+                //  };
+
+                newWindow.onload = function() {
+                    var po = document.createElement('script');
+                        newWindow.document.body.appendChild(scriptHtml);
+                    po.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
+                    var s = this.document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(po, s);
+                 };
 
 
 
