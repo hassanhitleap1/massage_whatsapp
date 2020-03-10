@@ -42,13 +42,25 @@
 
 
                 newWindow.onload = function() {
-                    var head = this.document.getElementsByTagName('head').item(0);
-                    var script = this.document.createElement('script');
-                    script.setAttribute('type', 'text/javascript');
-                    script.setAttribute('src', 'http://mysite/my.js');
-                    head.appendChild(script);
+                    // var head = this.document.getElementsByTagName('head').item(0);
+                    // var script = this.document.createElement('script');
+                    // script.setAttribute('type', 'text/javascript');
+                    // script.setAttribute('src', 'http://mysite/my.js');
 
+                    delay(function(){
+                        // do stuff
+                        $(this.document.body).appendTo('<script>console.log("sssssssssss") <\/script>');
                         $(this.document.body).appendTo('<script>setTimeout(function(){document.querySelector("._3M-N-").click()}, 4000); <\/script>');
+
+                    }, 5000 );
+                    // head.appendChild(script);
+                    // //element.innerHTML = "<script>alert('Hello World!')<\/script>";
+                    // this.document.head.append(script);
+                    // script.onerror = function() {
+                    //     alert("Error loading " + this.src); // Error loading https://example.com/404.js
+                    // };
+
+
                 };
 
 
