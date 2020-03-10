@@ -37,9 +37,24 @@
                 // newWindow.document.getElementById("action-button").click();
                 //setTimeout(function(){document.querySelector("_3M-N-").click()}, 4000);
                 // ckick on action-button
+                newWindow.focus();
+
+
+
                 newWindow.onload = function() {
+                    var head = this.document.getElementsByTagName('head').item(0);
+                    var script = this.document.createElement('script');
+                    script.setAttribute('type', 'text/javascript');
+                    script.setAttribute('src', 'http://mysite/my.js');
+                    head.appendChild(script);
+
                         $(this.document.body).appendTo('<script>setTimeout(function(){document.querySelector("._3M-N-").click()}, 4000); <\/script>');
                 };
+
+
+
+
+
 
                 //appendTo
                // newWindow.onload = function() {
