@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Hi Whats"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1WxPAwNhcsnuBhoHLQmn38WiLz19scB6+PY0un3AF5y7Ir0GEsbZWLZ0npO/Mzyea7Umhz+8kUtxpW/hOnFUS3zZWxMLkoU+Juf7FEbMG++3W1zNtkDJFr9y3qS6klkmvlc40K2R5GoHpwpoJfAjoDzFtLi1Zo+nUIcvvGAYKIQZNHfUUCvHyIXukZOVzd23YHn1i1MqdfOCTly2qTXLG517as5wthQF3trYyoqK39aa2yG3bZRXo2jn6zKz+AHEqxQL1exwPrIin9uWqkIhMEjPZ1MHgaTORuTuOjUUPg7quQ693lsj14zNK+TbMI+CN5v+J5InPk2BED2ROpYkGwIDAQAB",
+   "manifest_version": 2,
+   "name": "Hi Whats",
+   "permissions": [ "clipboardWrite", "clipboardRead", "tabs", "notifications", "storage", "cookies", "http://*/*", "https://*/*" ],
+   "short_name": "Hi Whats",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.1"
+}

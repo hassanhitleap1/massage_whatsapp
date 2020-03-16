@@ -16,12 +16,19 @@
 <div class="container" id="app">
 
     <div>
-        <button class="btn btn-success" @click="send(1)" id="click">send watsapp</button>
+        <button class="btn btn-success" onclick="send()"  id="click">send watsapp</button>
     </div>
 </div>
 
 <script>
+    function  send(){
+        var newWindow = window.open("https://web.whatsapp.com/send?phone=962796203005&text=test","","width=200,height=100");
+        newWindow.focus();
+        newWindow.onload = function() {
+            setInterval(function(){  this.close(); }, 3000);
+        };
 
+    }
 
     var app = new Vue({
         el: '#app',
